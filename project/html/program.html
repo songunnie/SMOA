@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- 부트스트랩 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- 구글폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+<!-- CSS 파일 -->
+<link rel="stylesheet" href="../css/banner1.css">
+<link rel="stylesheet" href="../css/program.css">
+<meta charset="UTF-8">
+<title>SMOA PROGRAM</title>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	
+const reserve = (idx) => {	
+	/* alert(idx); */
+	let obj1 = document.getElementsByClassName("card-title");
+	let title = obj1[idx];
+	/* alert(title.innerHTML); */
+	
+	let obj2 = document.getElementsByClassName("schedule");
+	let schedule = obj2[idx];
+	/* alert(schedule.innerHTML); */
+	
+	let obj3 = document.getElementsByClassName("card-img-top");
+	let image = obj3[idx];
+	/* alert(image.src); */
+	
+	localStorage.setItem("title1", title.innerHTML);
+	localStorage.setItem("date1", schedule.innerHTML);
+	localStorage.setItem("image1", image.src);
+	
+	location.href = "reserve.html";
+}
+</script>
+</head>
+<body>
+	<div class="banner" onclick="location.href='movie2.html'">
+		<b>SONG'S <br /> MUSEUM OF <br /> ART
+		</b>
+	</div>
+	<nav id="bread" style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+	  <ol class="breadcrumb justify-content-center">
+	    <li class="breadcrumb-item active" aria-current="page">PROGRAM</li>
+	    <li class="breadcrumb-item"><a href="#" onclick="location.href='shop.html'">MUSEUM SHOP</a></li>
+	    <li class="breadcrumb-item"><a href="#" onclick="location.href='info.html'">INFOMATION</a></li>
+	    <li class="breadcrumb-item"><a href="#" onclick="location.href='reserve.html'">TICKET RESERVATION</a></li>
+	  </ol>
+	</nav>
+	
+	<!-- program 누르면 -->
+    <div id="boxbox" class="row row-cols-1 row-cols-md-3 g-4">
+	  <div class="col">
+	    <div class="card h-100">
+	      <img name="headimg" src="../image/1.jpg" class="card-img-top" alt="...">
+	      <div class="card-body" onclick="reserve(0)">
+	        <p style="color:#FA8072">✦ 클릭시 예매 페이지로 이동 ✦</p>
+	        <h5 class="card-title">사울 레이터 사진전</h5>
+	        <p class="card-text">영화 '캐롤'에 큰 영향을 준 사진으로 유명한 작가 '사울 레이터'의 사진전이다.
+	        컬러 사진의 선구자라고도 불리는 그의 사진을 통해 60년대의 뉴욕을 느낄 수 있다.<br/><br/>
+	        실제로 뉴욕에서 살았던 작가의 뉴욕 일상과 풍경만을 오롯이 담겨있는 그의 작품을 통해
+	        우리가 매일 걷는 거리, 항상 주변에 있어 익숙하게 여기던 것들을 바라 보는 것이 얼마나 아름다운 일인지 알려준다. </p><br/>
+	      	<p class="schedule"> 전시일정: 2022.09.21(수) ~ 2022.11.27(일)</p><br/>
+	      	<!-- <p>(클릭시 예매 페이지로 이동)</p> -->
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col">
+	    <div class="card h-100">
+	      <img name="headimg" src="../image/2.jpg" class="card-img-top" alt="...">
+	      <div class="card-body" onclick="reserve(1)">
+	        <p style="color:#FA8072">✦ 클릭시 예매 페이지로 이동 ✦</p>
+	        <h5 class="card-title">코코 카피탄 작품전</h5>
+	        <p class="card-text">세계적인 브랜드 및 매체가 주목하고 있는 '영 아트 스타(Young Art Star)' 
+	        코코 카피탄의 전시로 아시아 최초로 개최한다. 형식에 얽매이지 않고 솔직하고 대담하게 자신을 표현해 온 코코 카피탄의 
+	        사진, 페인팅, 핸드라이팅, 영상, 설치 등 총 150여 점의 작품을 소개한다.<br/><br/>죽음은 언제나 다가오고 불안과 소외감이 늘 우리를 괴롭혀도
+	        그럼에도 '오늘'을 충실히 살아가는 모두를 위하여. <br/><br/>
+	        <p class="schedule"> 전시일정: 2022.04.06(수) ~ 2022.12.04(일)</p><br/>
+	        <!-- <p>(클릭시 예매 페이지로 이동)</p> -->
+	        
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col">
+	    <div class="card h-100">
+	      <img name="headimg" src="../image/3.jpg" class="card-img-top" alt="...">
+	      <div class="card-body" onclick="reserve(2)">
+	        <p style="color:#FA8072">✦ 클릭시 예매 페이지로 이동 ✦</p>
+	        <h5 class="card-title">데미안 展</h5>
+	        <p class="card-text">다양한 작가의 작품이 소설의 줄거리별로 배치되어 한 사람의 글과 문장이 아닌 
+	        여러 작가의 해법과 각종 설 작품으로 데미안을 읽어가는 색다른 전시이다. 현대 미술로 표현한 
+	        환상적인 데미안의 세계를 느낄 수 있다. <br/><br/>주인공 싱클레어의 시간을 따라 나만의 여정을 즐겨보는 이 전시는 
+	        "새는 알에서 나오려고 투쟁한다. 알은 세계다. 태어나려는 자는 하나의 세계를 깨트려야 한다." 라는 
+	        소설 속 말처럼, 알을 깨고 나오기 위해 투쟁하는 우리들의 성장 이야기를 들어봅니다.</p><br/>
+	      	<p class="schedule"> 전시일정: 2022.10.12(수) ~ 2022.12.24(토)</p>
+	      	<!-- <p>(클릭시 예매 페이지로 이동)</p> -->
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col">
+	    <div class="card h-100">
+	      <img src="../image/4.jpg" class="card-img-top" alt="...">
+	      <div class="card-body" onclick="reserve(3)">
+	        <p style="color:#FA8072">✦ 클릭시 예매 페이지로 이동 ✦</p>
+	        <h5 class="card-title">Tape Seoul</h5>
+	        <p class="card-text">
+	       유럽 출신의 아티스트 그룹 뉴멘/포유즈(Numen/For Use)의 대규모 프로젝트인 테이프 시리즈가 서울에서도 설치, 진행된다.
+	       일상 생활에서 흔히 볼 수 있는 테이프롤 사용해 구조물을 만들고 관람객들은 그 안을 탐험하며 즐기는 체험형 전시로
+	       관객의 참여가 이 프로젝트의 중요한 요소이자 완성이 된다는 특징이 있다.<br/><br/>
+	       테이프 서울을 통해 관객들은 새롭게 구현된 공간에 대한 지각을 확장 시키고, 완전히 색다른 차원에서 공간을 인식할 수 있다.</p><br/>
+	      	<p class="schedule"> 전시일정: 2022.10.26(수) ~ 2022.12.31(토)</p>
+	      	<!-- <p>(클릭시 예매 페이지로 이동)</p> -->
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col">
+	    <div class="card h-100">
+	      <img src="../image/5.jpg" class="card-img-top" alt="...">
+	      <div class="card-body" onclick="reserve(4)">
+	      	<p style="color:#FA8072">✦ 클릭시 예매 페이지로 이동 ✦</p>
+	        <h5 class="card-title">프랑코 폰타나: 컬러 인 라이프</h5>
+	        <p class="card-text">
+	        사진인지 회화인지 구분이 힘들 정도로 경이로운 추상적 색채 풍경으로 세계적 명성을 이어가고 있는 프랑코 폰타나는
+	        이번 전시를 통해 60년대부터 지금까지 고찰하는 예술적 주제이자 그의 인생 철학이 담겨있는 삶의 풍경 122점을 선보인다. <br/><br/>
+	        폰타나에게 풍경은 단순히 자연이 아니라, 우리 삶의 모든 모습이다. 우리가 그 동안 간과했던 것을 포착하고 드러내는 것이 폰타나의 예술이다.
+	        이러한 프랑코 폰타나가 50년 넘게 렌즈라는 매개로 담아온 놀라운 삶의 형태와 색채를 확인해 볼 수 있다.</p><br/>
+	      	<p class="schedule"> 전시일정: 2022.11.02(수) ~ 2022.12.31(토)</p>
+	      	<!-- <p>(클릭시 예매 페이지로 이동)</p> -->
+	      </div>
+	    </div>
+	  </div>
+	  <div class="col">
+	    <div class="card h-100">
+	      <img src="../image/6.jpg" class="card-img-top" alt="...">
+	      <div class="card-body" onclick="reserve(5)">
+	      	<p style="color:#FA8072">✦ 클릭시 예매 페이지로 이동 ✦</p>
+	        <h5 class="card-title">데이비드 호크니 展</h5>
+	        <p class="card-text">존재 자체가 하나의 장르인 이 시대의 예술가, 데이비드 호크니.
+	        이번 전시는 호크니의 뮤즈와 주변인을 그린 초상화를 비롯하여 로스앤젤레스 시기의 작품과 호크니의 예술에 있어서
+	        가장 풍요로웠던 60년대 중반의 작업들은 물론, 80년대 이후 좀 더 실험주의자에 가깝게 변모한 호크니의 작품세계 등 
+	        호크니 전 생애에 걸친 시기별 주요작을 통해 호크니를 입체적으로 조명한다. <br/>
+	        고전과 현대, 정통성과 실험성을 동시에 추구하며, 서사가 담긴 작품으로 전세계인을 매료시키는 현대 미술의 거장, 데이비드 호크니의 이번 전시를 통해 세계를 만나볼 수 있다.</p><br/>
+	      	<p class="schedule"> 전시일정: 2022.11.30(수) ~ 2023.01.15(일)</p>
+	      	
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</body>
+</html>
